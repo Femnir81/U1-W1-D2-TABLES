@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tables and Form</title>
+    <style>
+      table {
+        width: 100%;
+      }
+      td {
+        text-align: center;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <caption>
+        Registry
+      </caption>
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Cognome</th>
+          <th>Presenza</th>
+          <th>Webcam</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="3">Marco</td>
+          <td>Rossi</td>
+          <td>✔</td>
+          <td>✔</td>
+        </tr>
+        <tr>
+          <td rowspan="2">Marco</td>
+          <td>Rossi</td>
+          <td>✔</td>
+          <td>✔</td>
+        </tr>
+        <tr>
+          <td>Marco</td>
+          <td>Rossi</td>
+          <td>✔</td>
+          <td>✔</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <td colspan="3">Totale</td>
+      </tfoot>
+    </table>
+    <form method="get|post" action="register.php" autocomplete="on">
+      <fieldset>
+        <legend>Anagrafica</legend>
+        <label for="username">username</label>
+        <input type="text" name="username" id="username" / required>
+        </fieldset>
+        <label for="password">password</label>
+      <input type="password" name="password" id="password" />
+      </fieldset>
+      <fieldset>
+      <label for="email">email</label>
+      <input type="email" name="email" id="email" />
+      </fieldset>
+      <fieldset>
+        <legend>Radio</legend>
+        <label for="domanda1"></label>
+        <input type="radio" name="domanda1" id="domanda1" value="0">
+        <input type="radio" name="domanda1" id="domanda1" value="1">
+        <input type="radio" name="domanda1" id="domanda1" value="2">
+      </fieldset>
+      <fieldset>
+        <legend>Checkboxes</legend>
+        <label for="checkbox1"></label>
+        <input type="checkbox" name="checkbox1" id="checkbox1" checked>
+        <label for="checkbox2"></label>
+        <input type="checkbox" name="checkbox2" id="checkbox2" checked>
+      </fieldset>
+      <select name="region" id="region">
+        <option value=""></option>
+        <optgroup label="Liguria">
+        <option value="SP">La Spezia</option>
+        </optgroup>
+      </select>
+      <textarea name="commenti" id="" cols="30" rows="10"></textarea>
+    <input type="submit" value="salva">
+    <button type="submit">invia</button>
+    <button type="reset">reset</button>
+    <button type="button">button</button>
+    </form>
+  </body>
+</html>
